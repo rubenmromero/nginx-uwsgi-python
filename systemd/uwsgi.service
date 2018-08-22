@@ -1,0 +1,12 @@
+[Unit]
+Description=uWSGI instance to serve '<python_scripts_dir_name>' python scripts
+After=syslog.target
+
+[Service]
+WorkingDirectory=<abs_path_to_python_scripts_dir>
+User=www-data
+Group=www-data
+ExecStart=<abs_path_to_python_scripts_dir>/uwsgi --ini ./uwsgi.ini
+
+[Install]
+WantedBy=multi-user.target
