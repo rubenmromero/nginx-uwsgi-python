@@ -1,6 +1,18 @@
 # Nginx-uWSGI-Python
 
-Configuration example to execute Python scripts from Nginx through uWSGI application server.
+Configuration example to execute Python scripts via CGI through Nginx and uWSGI application server.
+
+Execution model:
+
+    http[s]://<dns_prefix>.<domain>/<python_script> ---> Nginx (reverse proxy) ---> uWSGI
+
+## Description of included files
+
+* `/nginx/XX-dns_prefix.conf` => Nginx VHost template
+* `/python_scripts/deploy.py` => Example Python script to execute
+* `/python_scripts/uwsgi` => uWSGI compiled binary through '`curl http://uwsgi.it/install | bash -s cgi <abs_path_to_python_scripts_dir>/uwsgi`'
+* `/python_scripts/uwsgi.ini`=> uWSGI configuration file
+* `/systemd/uwsgi.service` => Systemd service file for the uWSGI instance responsible for executing the Python scripts
 
 ## Related Links
 
