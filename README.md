@@ -10,7 +10,7 @@ Execution model:
 
 * `/nginx/XX-dns_prefix.conf` => Nginx VHost template
 * `/python_scripts/deploy.py` => Example Python script to execute
-* `/python_scripts/uwsgi` => uWSGI compiled binary through '`curl http://uwsgi.it/install | bash -s cgi <abs_path_to_python_scripts_dir>/uwsgi`'
+* `/python_scripts/uwsgi` => uWSGI compiled binary through '`curl http://uwsgi.it/install | bash -s cgi <abs_path_to_python_scripts_dir>/uwsgi`' command
 * `/python_scripts/uwsgi.ini`=> uWSGI configuration file
 * `/systemd/uwsgi.service` => Systemd service file for the uWSGI instance responsible for executing the Python scripts
 
