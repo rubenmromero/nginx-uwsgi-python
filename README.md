@@ -6,7 +6,7 @@ Configuration example to execute Python scripts via CGI through Nginx and uWSGI 
 
 Execution model:
 
-    http[s]://<dns_prefix>.<domain>/<python_script>     ---->     Nginx (reverse proxy)     ---->     uWSGI (CGI)
+    http[s]://<dns_prefix>.<domain>/<python_script>    ---->    Nginx (reverse proxy)    ---->    uWSGI (CGI)
 
 ## Description of included files
 
